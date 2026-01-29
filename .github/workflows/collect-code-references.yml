@@ -1,4 +1,4 @@
-name: Collect Code References
+name: Flagsmith Code References
 
 on:
   push:
