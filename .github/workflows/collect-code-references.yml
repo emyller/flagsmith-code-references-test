@@ -1,0 +1,16 @@
+name: Collect Code References
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  collect:
+    name: Collect
+    uses: Flagsmith/ci/.github/workflows/collect-code-references.yml@main
+    with:
+      flagsmith_project_id: ${{ vars.FLAGSMITH_PROJECT_ID }}
+    secrets:
+      flagsmith_admin_api_key: ${{ secrets.FLAGSMITH_CODE_REFERENCES_API_KEY }}
